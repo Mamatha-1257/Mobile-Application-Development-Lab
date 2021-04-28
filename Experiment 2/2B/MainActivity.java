@@ -2,6 +2,7 @@ package com.example.app2b;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
 
@@ -77,10 +79,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 String pas = password.getText().toString();
                 String add = address.getText().toString();
                 String ag = age.getText().toString();
-                answer.setText( "Name: " +st + "\n" + "Password: " + pas + "\n" +
-                        "Address: "+ add + "\n" + "Age: " + ag + "\n" +
-                        "Gender: " + gender + "\n" + "Date: " + date + "\n" +
-                        "State: "+ state);
+                if(st != null && pas != null && add != null && ag != null && gender != null && date != null && state != null) {
+                    answer.setText("Name: " + st + "\n" + "Password: " + pas + "\n" +
+                            "Address: " + add + "\n" + "Age: " + ag + "\n" +
+                            "Gender: " + gender + "\n" + "Date: " + date + "\n" +
+                            "State: " + state);
+                }else{
+                    Toast.makeText(MainActivity.this,"Enter all the details", Toast.LENGTH_SHORT).show();
+
+                }
             }
         });
 
