@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">App3</string>
+
+    <string-array name="candidates">
+        <item>Mamatha</item>
+        <item>Pravallika</item>
+        <item>Monika</item>
+        <item>Neha</item>
+        <item>Anusha</item>
+
+    </string-array>
+    <string name="Mamatha">
+        Hello I am Mamatha. Currently in 3rd Year. Department IT
+    </string>
+    <string name="Pravallika">
+        Hello I am Pravallika, Currently in 3rd Year. Department IT
+    </string>
+    <string name="Monika">
+        Hello I am Monika, Currently in 3rd Year. Department IT
+    </string>
+    <string name="Neha">
+        Hello I am  Neha,Currently in 3rd Year. Department IT
+    </string>
+
+    <string name="Anusha">
+        Hello I am  Anusha,Currently in 3rd Year. Department IT
+    </string>
+</resources>
