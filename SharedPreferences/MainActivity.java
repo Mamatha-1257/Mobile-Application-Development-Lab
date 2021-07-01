@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void saveContent(View view) {
-        if (name.getText().toString() == "" || age.getText().toString() == "") {
+        if (name.getText().toString().equals("") || age.getText().toString().equals("")) {
             Toast.makeText(MainActivity.this, "Enter the details", Toast.LENGTH_SHORT).show();
         } else {
             SharedPreferences.Editor myEdit = prefs.edit();
