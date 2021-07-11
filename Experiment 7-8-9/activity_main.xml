@@ -193,6 +193,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="RtlCompat" />
+
             <Button
                 android:id="@+id/LOGIN"
                 android:layout_width="130dp"
@@ -205,6 +206,19 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginLeft="159dp" />
+
+            <Button
+                android:id="@+id/UPD"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="159dp"
+                android:layout_marginLeft="159dp"
+                android:layout_marginTop="30dp"
+                android:background="#6200EE"
+                android:text="update"
+                android:textColor="@color/cardview_light_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
     </ScrollView>

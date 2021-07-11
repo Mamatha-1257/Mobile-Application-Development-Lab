@@ -17,6 +17,8 @@ public class DBHelper  extends SQLiteOpenHelper {
     public static final String col4 = "gender";
     public static final String col5 = "DOB";
     public static final String col6 = "age";
+    public static final String TABLE_NAME = "userstable";
+
 
     public DBHelper(@Nullable Context context) {
 
@@ -55,6 +57,22 @@ public class DBHelper  extends SQLiteOpenHelper {
         Cursor c = db.rawQuery("Select * from userstable where email = ? and password = ?",new String[]{email,pass});
         if(c.getCount()>0){
             return true;
+        }
+        return false;
+    }
+
+    public boolean updateRecord(String email,String name,String pass){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c = db.rawQuery("Select * from userstable where email = ?",new String[]{email});
+        if(c.getCount()>0){
+            ContentValues cv = new ContentValues();
+            cv.put(DBHelper.col1,name);
+            cv.put(DBHelper.col2,pass);
+            String where="email = ?";
+            long n = db.update(TABLE_NAME,cv, where, new String[]{email});
+            if(n>0){
+                return true;
+            }
         }
         return false;
     }

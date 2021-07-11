@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity{
     EditText age;
     RadioGroup radioGroup;
     RadioButton radioButton;
-    Button logg;
+    Button logg, update;
 
     String date;
     String gender;
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity{
         buttonSubmit = (Button)findViewById(R.id.button);
 
         radioGroup = (RadioGroup)findViewById(R.id.gender);
+        update = (Button)findViewById(R.id.UPD);
 
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
 
@@ -82,6 +83,14 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(new Intent(MainActivity.this,Login.class));
             }
         });
+
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,EditRecord.class));
+            }
+        });
+
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
 
